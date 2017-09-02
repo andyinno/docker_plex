@@ -1,0 +1,12 @@
+# Plex server
+plex:
+  container_name: plex
+  image: andyinno/plex
+  net: "host"
+  ports:
+   - 32400:32400
+  restart: always
+  volumes:
+   - /home/pi/plex/config:/config
+   - /home/pi/plex/data:/data
+
